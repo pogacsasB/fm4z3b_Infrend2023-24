@@ -7,7 +7,7 @@ export const AppDataSource = new DataSource({
     host: "localhost",
     port: 4200,
     username: "root",
-    database: "infrend2024_user",
+    database: "testing",
     synchronize: true,
     logging: true,
     entities: [User],
