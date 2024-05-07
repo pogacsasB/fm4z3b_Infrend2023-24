@@ -6,6 +6,9 @@ import { Patient } from "./Patient";
 export class PatientHistory implements PatientHistoryDTO {
 
     @PrimaryGeneratedColumn()
+    visitId: number
+    
+    @Column()
     taj: number
 
     @Column()

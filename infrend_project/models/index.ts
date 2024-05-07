@@ -5,7 +5,8 @@ export interface PatientDTO{
 }
 
 export interface PatientHistoryDTO{
-    taj: number;
+    visitId: number
+    taj: number
     diagnozis: string
     gyogyszerek: string
     leletek: string
