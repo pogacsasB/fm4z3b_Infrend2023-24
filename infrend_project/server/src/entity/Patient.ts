@@ -14,6 +14,4 @@ export class Patient implements PatientDTO {
     @Column()
     szul_datim: Date
 
-    @Column()
-    history: PatientHistory
 }
