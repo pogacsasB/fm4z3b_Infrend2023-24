@@ -12,7 +12,7 @@ export class Patient implements PatientDTO {
     nev: string
 
     @Column()
-    szul_datim: Date
+    szul_datum: Date
 
     @Column()
     taj: number
