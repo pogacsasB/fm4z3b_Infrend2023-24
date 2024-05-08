@@ -2,16 +2,24 @@
     <div class="col-md-6">
         <form [formGroup]="historyForm">
             <div class="mb-3">
-                <label for="name" class="form-label">Név</label>
-                <input type="text" class="form-control" id="nev" formControlName="nev">
+                <label for="beteg" class="form-label">Beteg</label>
+                <input type="text" class="form-control" id="beteg" formControlName="beteg">
             </div>
             <div class="mb-3">
-                <label for="address" class="form-label">Születési Dátum</label>
-                <input type="text" class="form-control" id="szul_datum" formControlName="szul_datum">
+                <label for="diagnozis" class="form-label">Diagnózis</label>
+                <input type="text" class="form-control" id="diagnozis" formControlName="diagnozis">
             </div>
             <div class="mb-3">
-                <label for="phone" class="form-label">Tajszám</label>
-                <input type="text" class="form-control" id="taj" formControlName="taj">
+                <label for="diagnozis" class="form-label">Diagnózis</label>
+                <input type="text" class="form-control" id="diagnozis" formControlName="diagnozis">
+            </div>
+            <div class="mb-3">
+                <label for="gyogyszerek" class="form-label">Gyógyszerek</label>
+                <input type="text" class="form-control" id="gyogyszerek" formControlName="gyogyszerek">
+            </div>
+            <div class="mb-3">
+                <label for="leletek" class="form-label">Leletek</label>
+                <input type="text" class="form-control" id="leletek" formControlName="leletek">
             </div>
         </form>
         <div class="text-end">
