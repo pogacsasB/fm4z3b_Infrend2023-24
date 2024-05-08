@@ -6,6 +6,10 @@ import { PatientHistory } from "./PatientHistory";
 export class Patient implements PatientDTO {
 
     @PrimaryGeneratedColumn()
+    id: number
+
+    //@OneToMany(type => PatientHistory, visit => visit.PatientHistory)
+    @Column()
     taj: number
 
     @Column()
