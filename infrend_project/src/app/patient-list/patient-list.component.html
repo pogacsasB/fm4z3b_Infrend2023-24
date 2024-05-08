@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Ügyfélkód</th>
+                    <th>Név</th>
+                    <th>Lakcím</th>
+                    <th>Telefonszám</th>
+                    <th>Személyi ig. szám</th>
+                    <th>Műveletek</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(patient of patients; track $index) {
+                    <tr>
+                        <td>{{ patient.nev }}</td>
+                        <td>{{ patient.szul_datum }}</td>
+                        <td>{{ patient.taj }}</td>
+                        <td>
+                            <button class="btn btn-outline-primary"
+                                (click)="loadTransactionsOfUser(patient.id)">Kimenő tranzakciók</button>
+                            <button class="btn btn-outline-primary"
+                                (click)="goToPatientForm(patient.id)">Módosítás</button>
+                            <button class="btn btn-outline-danger"
+                                (click)="deletePatient(patient)">Törlés</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

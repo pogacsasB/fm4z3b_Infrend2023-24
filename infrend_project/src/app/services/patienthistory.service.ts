@@ -5,7 +5,7 @@ import { PatientHistoryDTO } from '../../../models';
 @Injectable({
   providedIn: 'root'
 })
-export class TransactionService {
+export class PatientHistoryService {
 
   http = inject(HttpClient);
 
