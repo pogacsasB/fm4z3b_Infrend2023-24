@@ -5,7 +5,7 @@ export interface PatientDTO{
     id: number
     taj: number
     nev: string
-    szul_datum: string
+    szul_datum: Date
     kortortenet: PatientHistoryDTO[] | null
 }
 

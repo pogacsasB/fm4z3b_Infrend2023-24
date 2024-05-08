@@ -20,7 +20,7 @@ export class PatientFormComponent implements OnInit {
   patientForm = this.formBuilder.group<PatientDTO>({
     id: 0,
     nev: '',
-    szul_datum: '',
+    szul_datum: new Date('2000-01-01'),
     taj: 0,
     kortortenet: null
   });
@@ -35,7 +35,6 @@ export class PatientFormComponent implements OnInit {
       this.PService.getOne(id).subscribe({
         next: (patient) => this.patientForm.setValue(patient),
         error: (err) => {
-          // TODO: notification
           console.error(err);
         }
       });
