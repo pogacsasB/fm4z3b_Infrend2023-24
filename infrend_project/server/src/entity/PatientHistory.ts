@@ -6,17 +6,17 @@ import { Patient } from "./Patient";
 export class PatientHistory implements PatientHistoryDTO {
 
     @PrimaryGeneratedColumn()
-    visitId: number
+    visitId!: number
     
     @ManyToOne(() => Patient, Patient => Patient.kortortenet)
-    beteg: Patient
+    beteg!: Patient
 
     @Column()
-    diagnozis: string
+    diagnozis!: string
 
     @Column()
-    gyogyszerek: string
+    gyogyszerek!: string
 
     @Column()
-    leletek: string
+    leletek!: string
 }

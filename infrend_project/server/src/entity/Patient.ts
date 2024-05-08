@@ -6,18 +6,18 @@ import { PatientHistory } from "./PatientHistory";
 export class Patient implements PatientDTO {
 
     @PrimaryGeneratedColumn()
-    id: number
+    id!: number
 
     @Column()
-    nev: string
+    nev!: string
 
     @Column()
-    szul_datum: Date
+    szul_datum!: Date
 
     @Column()
-    taj: number
+    taj!: number
 
     @OneToMany(type => PatientHistory, patienthistory => patienthistory.beteg)
-    kortortenet: PatientHistory[]
+    kortortenet!: PatientHistory[]
 
 }
