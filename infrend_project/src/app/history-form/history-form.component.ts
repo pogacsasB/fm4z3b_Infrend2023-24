@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './history-form.component.html',
   styleUrl: './history-form.component.css'
 })
-export class PatientFormComponent implements OnInit {
+export class HistoryFormComponent implements OnInit {
   formBuilder = inject(FormBuilder);
   PHService = inject(PatientHistoryService);
   router = inject(Router);

@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { PatientListComponent } from './patient-list/patient-list.component';
-//import { UserFormComponent } from './user-form/user-form.component';
-//import { TransactionFormComponent } from './transaction-form/transaction-form.component';
+import { PatientFormComponent } from './patient-form/patient-form.component';
+import { HistoryFormComponent } from './history-form/history-form.component';
 
 export const routes: Routes = [
     {
@@ -9,15 +9,15 @@ export const routes: Routes = [
         component: PatientListComponent
     },
     {
-        path: 'add-user',
+        path: 'add-patient',
+        component: PatientFormComponent
+    },
+    {
+        path: 'edit-patient/:id',
         component: PatientListComponent
     },
     {
-        path: 'edit-user/:id',
-        component: PatientListComponent
-    },
-    {
-        path: 'add-transaction',
-        component: PatientListComponent
+        path: 'add-history',
+        component: HistoryFormComponent
     }
 ];
