@@ -2,7 +2,7 @@ import { Controller } from "./base.controller";
 import { AppDataSource } from "../data-source";
 import { PatientHistory } from "../entity/PatientHistory";
 
-export class TransactionController extends Controller {
+export class PatientHistoryController extends Controller {
     repository = AppDataSource.getRepository(PatientHistory);
 
     create = async (req, res) => {
