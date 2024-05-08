@@ -8,8 +8,8 @@ export class PatientHistory implements PatientHistoryDTO {
     @PrimaryGeneratedColumn()
     visitId: number
     
-    @ManyToOne(() => Patient, Patient => Patient.History)
-    patient: Patient
+    @ManyToOne(() => Patient, Patient => Patient.kortortenet)
+    beteg: Patient
 
     @Column()
     diagnozis: string

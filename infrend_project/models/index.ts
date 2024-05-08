@@ -6,12 +6,12 @@ export interface PatientDTO{
     taj: number
     nev: string
     szul_datum: Date
-    History: PatientHistory[]
+    kortortenet: PatientHistory[]
 }
 
 export interface PatientHistoryDTO{
     visitId: number
-    patient: Patient
+    beteg: Patient
     diagnozis: string
     gyogyszerek: string
     leletek: string

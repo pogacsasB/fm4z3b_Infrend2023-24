@@ -17,7 +17,7 @@ export class Patient implements PatientDTO {
     @Column()
     taj: number
 
-    @OneToMany(type => PatientHistory, patienthistory => patienthistory.patient)
-    History: PatientHistory[]
+    @OneToMany(type => PatientHistory, patienthistory => patienthistory.beteg)
+    kortortenet: PatientHistory[]
 
 }
