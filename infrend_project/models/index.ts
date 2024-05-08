@@ -1,3 +1,5 @@
+import { Patient } from "../server/src/entity/Patient"
+
 export interface PatientDTO{
     id: number
     taj: number
@@ -7,7 +9,7 @@ export interface PatientDTO{
 
 export interface PatientHistoryDTO{
     visitId: number
-    taj: number
+    patient: Patient
     diagnozis: string
     gyogyszerek: string
     leletek: string
