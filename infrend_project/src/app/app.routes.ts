@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { PatientListComponent } from './patient-list/patient-list.component';
 import { PatientFormComponent } from './patient-form/patient-form.component';
 import { HistoryFormComponent } from './history-form/history-form.component';
+import { HistoryListComponent } from './history-list/history-list.component';
 
 export const routes: Routes = [
     {
@@ -9,12 +10,16 @@ export const routes: Routes = [
         component: PatientListComponent
     },
     {
+        path: 'patient-history',
+        component: HistoryListComponent
+    },
+    {
         path: 'add-patient',
         component: PatientFormComponent
     },
     {
         path: 'edit-patient/:id',
-        component: PatientListComponent
+        component: PatientFormComponent
     },
     {
         path: 'add-history',
