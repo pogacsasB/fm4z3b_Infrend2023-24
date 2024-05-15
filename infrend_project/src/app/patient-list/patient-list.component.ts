@@ -46,7 +46,7 @@ export class PatientListComponent {
     });
   }
 
-  loadTransactionsOfUser(id: number) {
+  getHistoryOfPatient(id: number) {
     this.PHService.getHistoryOfPatient(id)
       .subscribe(history => console.log(history));
   }

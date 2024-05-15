@@ -26,6 +26,6 @@ export class PatientHistoryService {
   }
 
   getHistoryOfPatient(id: number) {
-    return this.http.get<PatientHistoryDTO[]>('/api/patient-history/visits/' + id); 
+    return this.http.get<PatientHistoryDTO[]>('/api/patient-history/visits/' + id);
   }
 }

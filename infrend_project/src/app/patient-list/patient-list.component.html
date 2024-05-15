@@ -16,7 +16,7 @@
                         <td>{{ patient.taj }}</td>
                         <td>
                             <button class="btn btn-outline-primary"
-                                (click)="loadTransactionsOfUser(patient.id)">Vizitek Listája</button>
+                                (click)="getHistoryOfPatient(patient.id)">Vizitek Listája</button>
                             <button class="btn btn-outline-primary"
                                 (click)="goToPatientForm(patient.id)">Módosítás</button>
                             <button class="btn btn-outline-danger"
