@@ -41,7 +41,6 @@ export class PatientListComponent {
         }
       },
       error: (err) => {
-        // TODO: notification
         console.error(err);
       }
     });
