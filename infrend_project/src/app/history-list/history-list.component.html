@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Diagnózis</th>
+                    <th>Gyógyszerek</th>
+                    <th>Leletek</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(history of histories; track $index) {
+                    <tr>
+                        <td>{{ history.diagnozis }}</td>
+                        <td>{{ history.gyogyszerek }}</td>
+                        <td>{{ history.leletek }}</td>
+                        <td>
+                            <button class="btn btn-outline-danger"
+                                (click)="deleteHistory(history)">Törlés</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

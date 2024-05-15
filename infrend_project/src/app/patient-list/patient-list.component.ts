@@ -29,7 +29,7 @@ export class PatientListComponent {
   }
 
   goToPatientForm(id: number) {
-    this.router.navigate([ 'edit-user', id ]);
+    this.router.navigate([ 'edit-patient', id ]);
   }
 
   deletePatient(patient: PatientDTO) {

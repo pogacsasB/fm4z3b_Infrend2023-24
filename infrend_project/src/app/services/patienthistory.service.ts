@@ -25,6 +25,10 @@ export class PatientHistoryService {
     return this.http.put<PatientHistoryDTO>('/api/patient', history);
   }
 
+  delete(id: number) {
+    return this.http.delete('/api/patient-history/' + id); 
+  }
+
   getHistoryOfPatient(id: number) {
     return this.http.get<PatientHistoryDTO[]>('/api/patient-history/visits/' + id);
   }
