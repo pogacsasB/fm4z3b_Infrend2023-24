@@ -10,7 +10,7 @@ export class PatientHistoryService {
   http = inject(HttpClient);
 
   getAll() {
-    return this.http.get<PatientHistoryDTO[]>('/api/transactions');
+    return this.http.get<PatientHistoryDTO[]>('/api/patient-history');
   }
 
   getOne(id: number) {
