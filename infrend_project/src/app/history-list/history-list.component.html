@@ -3,6 +3,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>Beteg ID</th>
                     <th>Vizit Éve</th>
                     <th>Diagnózis</th>
                     <th>Gyógyszerek</th>
@@ -12,6 +13,7 @@
             <tbody>
                 @for(history of histories; track $index) {
                     <tr>
+                        <td>{{ history.patientId }}</td>
                         <td>{{ history.vizitEve }}</td>
                         <td>{{ history.diagnozis }}</td>
                         <td>{{ history.gyogyszerek }}</td>
