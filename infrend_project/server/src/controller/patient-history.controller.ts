@@ -19,11 +19,11 @@ export class PatientHistoryController extends Controller {
 
     HistoryOfPatient = async (req, res) => {
         try {
-            const userId = req.params.userId;
+            const patientId = req.params.id;
 
             const transactions = await this.repository.find({
                 where: {
-                    beteg: { id: userId }
+                    beteg: { id: patientId }
                 }
             });
 
