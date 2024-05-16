@@ -21,13 +21,13 @@ export class PatientHistoryController extends Controller {
         try {
             const patientId = req.params.id;
 
-            const transactions = await this.repository.find({
+            const visits = await this.repository.find({
                 where: {
                     beteg: { id: patientId }
                 }
             });
 
-            res.json(transactions);
+            res.json(visits);
         } catch (err) {
             this.handleError(res, err);
         }
