@@ -42,10 +42,10 @@ export class PatientFormComponent implements OnInit {
   }
 
   savePatient() {
-    const user = this.patientForm.value as PatientDTO;
+    const patient = this.patientForm.value as PatientDTO;
 
     if (this.isNewPatient) {
-      this.PService.create(user).subscribe({
+      this.PService.create(patient).subscribe({
         next: (patientCreated) => {
           this.router.navigateByUrl('/');
         },
@@ -55,8 +55,8 @@ export class PatientFormComponent implements OnInit {
       });
     }
     else {
-      this.PService.update(user).subscribe({
-        next: (PCreated) => {
+      this.PService.update(patient).subscribe({
+        next: (patientCreated) => {
           this.router.navigateByUrl('/');
         },
         error: (err) => {
