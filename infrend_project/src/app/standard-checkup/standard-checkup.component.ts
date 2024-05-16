@@ -23,6 +23,8 @@ export class StandardCheckupComponent {
 
   maxMap: { [patientId: number]: number } = {};
 
+  
+
   checkup: string = "általános vizsgálat";
 
   ngOnInit(): void {

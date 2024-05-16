@@ -23,8 +23,6 @@ export class ProstCheckupComponent {
 
   max!: number[];
 
-  maximus: number = 0;
-
   //maxMap: { [patientId: number]: number } = {};
 
   checkup: string = "prosztata vizsgálat";
@@ -33,18 +31,26 @@ export class ProstCheckupComponent {
     this.PHService.getAll().subscribe({
       next: (histories) =>
         this.histories = histories,
-      error: (err) => console.error(err)
+      error: (err) => console.error(err),
+      complete: () =>{
+        this.calculateMaxVizitEvForEachPatient();
+      }
     });
     this.PService.getAll().subscribe({
       next: (patients) => this.patients = patients,
       error: (err) => console.error(err)
     });
-    this.calculateMaxVizitEvForEachPatient();
   }
 
   calculateMaxVizitEvForEachPatient(): void {
-    for (const patient of this.patients) {
-      this.max[patient.id] = 0;
+    for (const history of this.histories) {
+      this.max[history.patientId] = 0;
+    }
+
+    for (const history of this.histories) {
+      if(this.max[history.patientId] < history.vizitEve) {
+        this.max[history.patientId] = history.vizitEve;
+      }
     }
   }
 

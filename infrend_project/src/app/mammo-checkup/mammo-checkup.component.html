@@ -11,8 +11,10 @@
             <tbody>
                 @for(patient of patients; track $index) {
                     @if(2024 - patient.szul_ev >= 45 && patient.nem == "N") {
-                        <tr>{{patient.nev}}</tr>
-                        <tr>{{2024 - patient.szul_ev}}</tr>
+                        <tr>
+                            <th>{{patient.nev}}</th>
+                            <th>{{2024 - patient.szul_ev}}</th>
+                        </tr>
                     }
                 }
             </tbody>
