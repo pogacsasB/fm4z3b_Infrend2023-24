@@ -21,7 +21,7 @@ export class PatientFormComponent {
   patientForm = this.formBuilder.group<PatientDTO>({
     id: 0,
     nev: '',
-    szul_datum: new Date('2000-01-01'),
+    szul_ev: 0,
     taj: 0,
     nem: ''
   });

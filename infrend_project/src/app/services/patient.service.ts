@@ -1,12 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { PatientDTO } from '../../../models';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PatientService {
 
+  private apiUrl = 'api/patients'; 
+  
   http = inject(HttpClient);
 
   getAll() {
@@ -27,5 +30,10 @@ export class PatientService {
 
   delete(id: number) {
     return this.http.delete('/api/patient/' + id); 
+  }
+
+  getById(patientId: number): Observable<PatientDTO> {
+    const url = `${this.apiUrl}/${patientId}`;
+    return this.http.get<PatientDTO>(url);
   }
 }

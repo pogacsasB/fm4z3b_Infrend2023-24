@@ -16,7 +16,7 @@ export class Patient implements PatientDTO {
     nem!: string
 
     @Column()
-    szul_datum!: Date
+    szul_ev!: number
 
     @Column()
     taj!: number
