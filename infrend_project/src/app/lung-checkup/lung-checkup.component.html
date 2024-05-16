@@ -1,1 +1,23 @@
-<p>lung-checkup works!</p>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <h1>Tüdőszűrő vizsgálat</h1>
+                <tr>
+                    <th>Név</th>
+                    <th>Kor</th>
+                    <th>Legutolsó Vizsgálata</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(patient of patients; track $index) {
+                    @if(patient.szul_ev - maxMap[patient.id] > 1 && maxMap[patient.id] != 0 && 2024 - patient.szul_ev >= 18) {
+                        <tr>{{patient.nev}}</tr>
+                        <tr>{{2024 - patient.szul_ev}}</tr>
+                        <tr>{{maxMap[patient.id]}}</tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

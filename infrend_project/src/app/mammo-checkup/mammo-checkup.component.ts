@@ -23,7 +23,7 @@ export class MammoCheckupComponent {
 
   maxMap: { [patientId: number]: number } = {};
 
-  checkup: string = "prosztata vizsgálat";
+  checkup: string = "mammográfiai vizsgálat";
 
   ngOnInit(): void {
     this.PHService.getAll().subscribe({

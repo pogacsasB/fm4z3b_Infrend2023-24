@@ -23,7 +23,7 @@ export class LungCheckupComponent {
 
   maxMap: { [patientId: number]: number } = {};
 
-  checkup: string = "prosztata vizsgálat";
+  checkup: string = "tüdőszűrő vizsgálat";
 
   ngOnInit(): void {
     this.PHService.getAll().subscribe({
