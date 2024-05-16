@@ -17,6 +17,8 @@
                         <td>{{ patient.szul_ev }}</td>
                         <td>{{ patient.taj }}</td>
                         <td>
+                            <button class="btn btn-outline-primary"
+                                (click)="goToPatientForm(patient.id)">Módosítás</button>
                             <button class="btn btn-outline-danger"
                                 (click)="deletePatient(patient)">Törlés</button>
                         </td>

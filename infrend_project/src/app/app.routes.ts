@@ -14,6 +14,10 @@ export const routes: Routes = [
         component: PatientFormComponent
     },
     {
+        path: 'edit-patient/:id',
+        component: PatientFormComponent
+    },
+    {
         path: 'patient-history',
         component: HistoryListComponent
     },
