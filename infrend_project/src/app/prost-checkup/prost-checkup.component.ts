@@ -23,7 +23,7 @@ export class ProstCheckupComponent {
 
   max!: number[];
 
-  //maxMap: { [patientId: number]: number } = {};
+  trying: number = 0;
 
   checkup: string = "prosztata vizsgálat";
 
@@ -40,6 +40,10 @@ export class ProstCheckupComponent {
       next: (patients) => this.patients = patients,
       error: (err) => console.error(err)
     });
+  }
+
+  tryIncrease(): void {
+    this.trying = 3;
   }
 
   calculateMaxVizitEvForEachPatient(): void {
