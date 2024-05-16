@@ -20,7 +20,7 @@ export class HistoryFormComponent {
   historyForm = this.formBuilder.group<PatientHistoryDTO>({
     visitId: 0,
     vizitEve: 0,
-    beteg: 0,
+    beteg: null,
     diagnozis: '',
     gyogyszerek: '',
     leletek: ''

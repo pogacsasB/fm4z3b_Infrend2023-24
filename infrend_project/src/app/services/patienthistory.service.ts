@@ -29,7 +29,7 @@ export class PatientHistoryService {
     return this.http.delete('/api/patient-history/' + visitId); 
   }
 
-  getHistoryOfPatient(id: number) {
-    return this.http.get<PatientHistoryDTO[]>('/api/patient-history/visits/' + id);
+  getHistoryOfPatient(patientId: number) {
+    return this.http.get<PatientHistoryDTO[]>('/api/patient-history/visits/' + patientId);
   }
 }

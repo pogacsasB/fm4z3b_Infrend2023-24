@@ -1,12 +1,11 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm"
-import { PatientDTO } from "../../../models";
+import { PatientDTO, PatientHistoryDTO } from "../../../models";
 import { PatientHistory } from "./PatientHistory";
 
 @Entity()
 export class Patient implements PatientDTO {
 
     @PrimaryGeneratedColumn()
-    @OneToMany(type => PatientHistory, patienthistory => patienthistory.beteg)
     id!: number
 
     @Column()
@@ -20,4 +19,7 @@ export class Patient implements PatientDTO {
 
     @Column()
     taj!: number
+
+    @OneToMany(type => PatientHistory, history => history.beteg)
+    visitHistory!: PatientHistoryDTO[]
 }
