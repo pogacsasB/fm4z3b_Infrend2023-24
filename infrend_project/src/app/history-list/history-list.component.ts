@@ -22,25 +22,17 @@ export class HistoryListComponent {
 
   histories: PatientHistoryDTO[] = [];
 
+  historia: any[] = [];
+
   patients: Map<number, PatientDTO> = new Map<number, PatientDTO>();
   
   ngOnInit(): void {
     this.PHService.getAll().subscribe({
-      next: (histories) => this.histories = histories,
+      next: (histories) =>
+        this.histories = histories,
       error: (err) => console.error(err)
     });
   }
-
-  fetchPatients() {
-    this.histories.forEach(history => {
-        this.PService.getById(history.beteg).subscribe({
-            next: (patient) => {
-                this.patients.set(history.beteg, patient);
-            },
-            error: (err) => console.error(err)
-        });
-    });
-}
 
   goToHistoryForm(id: number) {
     this.router.navigate([ 'edit-history', id ]);
