@@ -21,7 +21,11 @@ export class ProstCheckupComponent {
 
   patients: PatientDTO[] = [];
 
-  maxMap: { [patientId: number]: number } = {};
+  max!: number[];
+
+  maximus: number = 0;
+
+  //maxMap: { [patientId: number]: number } = {};
 
   checkup: string = "prosztata vizsgálat";
 
@@ -40,14 +44,7 @@ export class ProstCheckupComponent {
 
   calculateMaxVizitEvForEachPatient(): void {
     for (const patient of this.patients) {
-      this.maxMap[patient.id] = 0;
-    }
-
-    for (const history of this.histories) {
-      const currentMax = this.maxMap[history.patientId];
-      if (history.vizitEve > currentMax && history.diagnozis == this.checkup) {
-        this.maxMap[history.patientId] = history.vizitEve;
-      }
+      this.max[patient.id] = 0;
     }
   }
 

@@ -3,6 +3,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Név</th>
                     <th>Nem</th>
                     <th>Születési Év</th>
@@ -12,6 +13,7 @@
             <tbody>
                 @for(patient of patients; track $index) {
                     <tr>
+                        <td>{{ patient.id }}</td>
                         <td>{{ patient.nev }}</td>
                         <td>{{ patient.nem }}</td>
                         <td>{{ patient.szul_ev }}</td>

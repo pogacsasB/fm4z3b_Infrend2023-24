@@ -6,15 +6,13 @@
                 <tr>
                     <th>Név</th>
                     <th>Kor</th>
-                    <th>Legutolsó Vizsgálata</th>
                 </tr>
             </thead>
             <tbody>
                 @for(patient of patients; track $index) {
-                    @if(patient.szul_ev - maxMap[patient.id] > 5 && patient.szul_ev - maxMap[patient.id] != patient.szul_ev) {
+                    @if(2024 - patient.szul_ev >= 1) {
                         <tr>{{patient.nev}}</tr>
                         <tr>{{2024 - patient.szul_ev}}</tr>
-                        <tr> {{maxMap[patient.id]}} </tr>
                     }
                 }
             </tbody>
