@@ -42,10 +42,6 @@ export class ProstCheckupComponent {
     });
   }
 
-  tryIncrease(): void {
-    this.trying = 3;
-  }
-
   calculateMaxVizitEvForEachPatient(): void {
     for (const history of this.histories) {
       this.max[history.patientId] = 0;
