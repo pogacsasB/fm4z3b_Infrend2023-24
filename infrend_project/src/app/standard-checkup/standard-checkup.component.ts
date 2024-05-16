@@ -21,7 +21,9 @@ export class StandardCheckupComponent {
 
   patients: PatientDTO[] = [];
 
-  max: number = 0;
+  maxMap: { [patientId: number]: number } = {};
+
+  checkup: string = "általános vizsgálat";
 
   ngOnInit(): void {
     this.PHService.getAll().subscribe({
@@ -33,14 +35,18 @@ export class StandardCheckupComponent {
       next: (patients) => this.patients = patients,
       error: (err) => console.error(err)
     });
-
-    this.findMax();
+    this.calculateMaxVizitEvForEachPatient();
   }
 
-  findMax(): void {
+  calculateMaxVizitEvForEachPatient(): void {
+    for (const patient of this.patients) {
+      this.maxMap[patient.id] = 0;
+    }
+
     for (const history of this.histories) {
-      if (history.vizitEve > this.max) {
-        this.max = history.vizitEve;
+      const currentMax = this.maxMap[history.patientId];
+      if (history.vizitEve > currentMax && history.diagnozis == this.checkup) {
+        this.maxMap[history.patientId] = history.vizitEve;
       }
     }
   }

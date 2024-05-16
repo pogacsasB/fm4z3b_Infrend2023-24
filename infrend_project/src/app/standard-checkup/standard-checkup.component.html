@@ -3,24 +3,15 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Vizit Éve</th>
-                    <th>Diagnózis</th>
-                    <th>Gyógyszerek</th>
-                    <th>Leletek</th>
+                    <th>Név</th>
+                    <th>Legutolsó Vizsgálata</th>
                 </tr>
             </thead>
             <tbody>
                 @for(patient of patients; track $index) {
-                    @for(history of histories; track $index) {
-                        @if(patient.id == history.patientId && history.vizitEve > max) {
-                            max = history.vizitEve;
-                        }
-                        
-                        
-                        
-                        @if(patient.szul_ev - max > 5) {
-                            
-                        }
+                    @if(patient.szul_ev - maxMap[patient.id] > 5 && patient.szul_ev - maxMap[patient.id] != 0) {
+                        <tr>{{patient.nev}}</tr>
+                        <tr> {{maxMap[patient.id]}} </tr>
                     }
                 }
             </tbody>
