@@ -49,7 +49,7 @@ export class HistoryFormComponent {
     if (this.isNewHistory) {
       this.PHService.create(user).subscribe({
         next: (HistoryCreated) => {
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('/patient-history');
         },
         error: (err) => {
           console.error(err);
@@ -59,7 +59,7 @@ export class HistoryFormComponent {
     else {
       this.PHService.update(user).subscribe({
         next: (PCreated) => {
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('/patient-history');
         },
         error: (err) => {
           console.error(err);

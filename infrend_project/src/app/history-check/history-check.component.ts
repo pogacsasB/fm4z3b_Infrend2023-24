@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { PatientHistoryDTO } from '../../../models';
 import { PatientDTO } from '../../../models';
-import { Router } from '@angular/router';
 import { PatientHistoryService } from '../services/patienthistory.service';
 import { PatientService } from '../services/patient.service';
 
@@ -19,8 +18,6 @@ export class HistoryCheckComponent {
   PService = inject(PatientService);
 
   PHService = inject(PatientHistoryService);
-
-  router = inject(Router);
 
   patients: PatientDTO[] = [];
 
