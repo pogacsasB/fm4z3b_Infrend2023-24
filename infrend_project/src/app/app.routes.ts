@@ -24,5 +24,9 @@ export const routes: Routes = [
     {
         path: 'add-history',
         component: HistoryFormComponent
+    },
+    {
+        path: 'patient-history/visits/:id',
+        component: HistoryListComponent
     }
 ]

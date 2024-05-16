@@ -12,6 +12,7 @@ export interface PatientDTO{
 export interface PatientHistoryDTO{
     visitId: number;
     beteg: PatientDTO | null;
+    patientId: number;
     vizitEve: number;
     diagnozis: string;
     gyogyszerek: string;

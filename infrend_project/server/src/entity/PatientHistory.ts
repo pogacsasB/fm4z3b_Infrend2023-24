@@ -12,6 +12,9 @@ export class PatientHistory implements PatientHistoryDTO {
     beteg!: Patient
 
     @Column()
+    patientId!: number;
+
+    @Column()
     vizitEve!: number
 
     @Column()

@@ -22,7 +22,7 @@ export class PatientHistoryService {
   }
 
   update(history: PatientHistoryDTO) {
-    return this.http.put<PatientHistoryDTO>('/api/patient', history);
+    return this.http.put<PatientHistoryDTO>('/api/patient-history', history);
   }
 
   delete(visitId: number) {

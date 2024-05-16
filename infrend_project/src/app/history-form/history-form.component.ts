@@ -21,6 +21,7 @@ export class HistoryFormComponent {
     visitId: 0,
     vizitEve: 0,
     beteg: null,
+    patientId: 0,
     diagnozis: '',
     gyogyszerek: '',
     leletek: ''
