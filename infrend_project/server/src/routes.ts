@@ -16,7 +16,6 @@ export function getRouter() {
     const PHController = new PatientHistoryController();
     router.get('/patient-history', PHController.getAll);
     router.get('/patient-history/:id', PHController.getOne);
-    router.get('/patient-history/visits/:userId', PHController.historyOfPatient);
     router.post('/patient-history', PHController.create);
 
     return router;

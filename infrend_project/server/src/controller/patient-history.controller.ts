@@ -16,20 +16,4 @@ export class PatientHistoryController extends Controller {
             this.handleError(res, err);
         }
     };
-
-    historyOfPatient = async (req, res) => {
-        try {
-            const id = req.params.id;
-
-            const transactions = await this.repository.find({
-                where: {
-                    beteg: { id: id }
-                }
-            });
-
-            res.json(transactions);
-        } catch (err) {
-            this.handleError(res, err);
-        }
-    };
 }

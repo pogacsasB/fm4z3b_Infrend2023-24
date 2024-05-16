@@ -45,9 +45,4 @@ export class PatientListComponent {
       }
     });
   }
-
-  getHistoryOfPatient(id: number) {
-    this.PHService.getHistoryOfPatient(id)
-      .subscribe(history => console.log(history));
-  }
 }

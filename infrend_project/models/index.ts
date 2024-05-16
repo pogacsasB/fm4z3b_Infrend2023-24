@@ -6,12 +6,13 @@ export interface PatientDTO{
     taj: number
     nev: string
     szul_datum: Date
-    kortortenet: PatientHistoryDTO[] | null
+    nem: string
 }
 
 export interface PatientHistoryDTO{
     visitId: number
-    beteg: PatientDTO | null
+    beteg: number
+    vizitEve: number
     diagnozis: string
     gyogyszerek: string
     leletek: string
