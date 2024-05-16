@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <table class="table table-striped">
             <thead>
-                <h1>Általános vizsgálat</h1>
+                <h1>Prosztata viszgálat</h1>
                 <tr>
                     <th>Név</th>
                     <th>Legutolsó Vizsgálata</th>
@@ -10,14 +10,13 @@
             </thead>
             <tbody>
                 @for(patient of patients; track $index) {
-                    @if(patient.szul_ev - maxMap[patient.id] > 5 && patient.szul_ev - maxMap[patient.id] != patient.szul_ev) {
+                    @if(patient.szul_ev - maxMap[patient.id] > 2 && maxMap[patient.id] != 0 && 2024 - patient.szul_ev >= 35 && patient.nem == "F") {
                         <tr>{{patient.nev}}</tr>
                         <tr>{{2024 - patient.szul_ev}}</tr>
-                        <tr> {{maxMap[patient.id]}} </tr>
+                        <tr>{{maxMap[patient.id]}}</tr>
                     }
                 }
             </tbody>
         </table>
     </div>
 </div>
-
